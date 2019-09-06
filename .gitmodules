@@ -7,3 +7,9 @@
 [submodule "command_line_tools/samtools-merge_1.9"]
 	path = command_line_tools/samtools-merge_1.9
 	url = https://github.com/mskcc-cwl/samtools-merge_1.9
+[submodule "command_line_tools/gatk_apply_bqsr_4.1.0.0"]
+	path = command_line_tools/gatk_apply_bqsr_4.1.0.0
+	url = https://github.com/mskcc-cwl/gatk_apply_bqsr_4.1.0.0
+[submodule "command_line_tools/gatk_base_recalibrator_4.1.0.0"]
+	path = command_line_tools/gatk_base_recalibrator_4.1.0.0
+	url = https://github.com/mskcc-cwl/gatk_base_recalibrator_4.1.0.0
