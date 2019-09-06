@@ -1,0 +1,3 @@
+[submodule "align_sort_bam"]
+	path = align_sort_bam
+	url = https://github.com/mskcc-cwl/align_sort_bam.git
