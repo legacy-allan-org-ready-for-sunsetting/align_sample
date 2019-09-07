@@ -47,6 +47,10 @@ outputs:
     outputSource:
       - gatk_markduplicatesgatk/output_md_bam
     type: File
+  - id: output_baserecal
+    outputSource:
+      - gatk_base_recalibrator/output
+    type: File
 
 steps:
   - id: samtools_merge
