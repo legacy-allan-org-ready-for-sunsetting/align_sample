@@ -2,6 +2,7 @@
 
 This set of CWLs uses the `align_sort_bam.cwl` submodule to create BAM file(s) after Mark Duplicates.
 
+```
 inputs:
   reference_sequence
     type: File
