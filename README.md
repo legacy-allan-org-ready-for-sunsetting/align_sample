@@ -1,6 +1,6 @@
 # align_sample
 
-This set of CWLs uses the `align_sort_bam.cwl` submodule to create BAM file(s) after Mark Duplicates.
+This set of CWLs uses the [`align_sort_bam.cwl`](https://github.com/mskcc-cwl/align_sort_bam) submodule to create BAM file(s) after Mark Duplicates.
 
 ```
 inputs:
@@ -21,6 +21,7 @@ inputs:
     type: string
   lane_id
     type: 'string[]'
+    
 outputs:
   sample_id_output
     type:
