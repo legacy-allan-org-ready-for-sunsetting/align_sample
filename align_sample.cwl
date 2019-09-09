@@ -109,6 +109,19 @@ steps:
     run: >-
       command_line_tools/gatk_base_recalibrator_4.1.0.0/gatk_base_recalibrator_4.1.0.0.cwl
     label: GATK Base Recalibrator
+  - id: gatk_apply_bqsr
+    in:
+      - id: reference
+        source: reference_sequence
+      - id: input
+        source:  gatk_markduplicatesgatk/output_md_bam
+      - id: bqsr_recal_file 
+        source: gatk_base_recalibrator/output
+    out:
+      - id: output
+    run: >-
+      command_line_tools/gatk_apply_bqsr_4.1.0.0/gatk_apply_bqsr_4.1.0.0.cwl
+    label: GATK Apply BQSR
 requirements:
   - class: SubworkflowFeatureRequirement
   - class: ScatterFeatureRequirement
