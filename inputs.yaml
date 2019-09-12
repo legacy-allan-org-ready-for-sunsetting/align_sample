@@ -1,0 +1,79 @@
+{
+    "reference_sequence": {
+        "class": "File",
+         "path": "path/to/genome/reference.fasta",
+        "secondaryFiles": [
+             {
+             "class": "File",
+             "path": "path/to/genome/reference.fasta.amb"
+             },
+             {
+             "class": "File",
+             "path": "path/to/genome/reference.fasta.ann"
+             },
+             {
+             "class": "File",
+             "path": "path/to/genome/reference.fasta.bwt"
+             },
+             {
+             "class": "File",
+             "path": "path/to/genome/reference.fasta.fai"
+             },
+             {
+             "class": "File",
+             "path": "path/to/genome/reference.fasta.pac"
+             },
+             {
+             "class": "File",
+             "path": "path/to/genome/reference.fasta.sa"
+             },
+             {
+             "class": "File",
+             "path": "path/to/genome/reference.dict"
+             }
+        ]
+    },
+    "known_sites": [ 
+        {
+        "class": "File",
+        "path": "known_sites/path/file.1.vcf",
+        "secondaryFiles": [{
+                "class": "File",
+                 "path": "/known_sites/path/file.1.vcf.gz"
+            }]
+        },
+        {
+        "class": "File",
+        "path": "known_sites/path/file.1.vcf",
+        "secondaryFiles": [{
+                "class": "File",
+                 "path": "/known_sites/path/file.1.vcf.gz"
+            }]
+        }
+    ],
+    "sample_id": "my_sample", 
+    "lane_id": [
+        "L1",
+        "L2"
+    ],
+    "r1": [
+        {
+        "class": "File",
+        "path": "path/to/r1.my_sample_L1.fastq.gz"
+        },
+        {
+        "class": "File",
+        "path": "path/to/r1.my_sample_L2.fastq.gz"
+        }
+    ],
+    "r2": [
+        {
+        "class": "File",
+        "path": "path/to/r2.my_sample_L1.fastq.gz"
+        },
+        {
+        "class": "File",
+        "path": "path/to/r2.my_sample_L2.fastq.gz"
+        }
+    ]
+}
