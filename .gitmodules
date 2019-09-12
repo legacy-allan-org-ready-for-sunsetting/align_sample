@@ -1,3 +1,9 @@
 [submodule "align_sort_bam"]
 	path = align_sort_bam
 	url = https://github.com/mskcc-cwl/align_sort_bam.git
+[submodule "command_line_tools/samtools_1.9"]
+	path = command_line_tools/samtools_1.9
+	url = https://github.com/mskcc-cwl/samtools_1.9
+[submodule "command_line_tools/gatk_4.1.0.0"]
+	path = command_line_tools/gatk_4.1.0.0
+	url = https://github.com/mskcc-cwl/gatk_4.1.0.0
