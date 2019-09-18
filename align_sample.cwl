@@ -59,7 +59,7 @@ steps:
           - bwa_sort/output_file
     out:
       - id: output_file
-    run: command_line_tools/samtools-merge_1.9/samtools-merge_1.9.cwl
+    run: command_line_tools/samtools_1.9/samtools_merge.cwl
   - id: bwa_sort
     in:
       - id: r1
@@ -93,7 +93,7 @@ steps:
       - id: output_md_bam
       - id: output_md_metrics
     run: >-
-      command_line_tools/gatk_mark_duplicates_4.1.0.0/gatk_mark_duplicates_4.1.0.0.cwl
+      command_line_tools/gatk_4.1.0.0/gatk_mark_duplicates.cwl
     label: GATK MarkDuplicates
 requirements:
   - class: SubworkflowFeatureRequirement
