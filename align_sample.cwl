@@ -42,6 +42,16 @@ outputs:
     type: File
 
 steps:
+  - id: group_reads
+    in: 
+      - id: r1
+        source: r1
+      - id: r2
+        source: r2
+    out:
+      - id: output
+    run: joinr1r2.cwl
+
   - id: samtools_merge
     in:
       - id: input_bams
@@ -49,7 +59,7 @@ steps:
           - bwa_sort/output_file
     out:
       - id: output_file
-    run: command_line_tools/samtools_1.9/samtools_merge.cwl
+    run: command_line_tools/samtools-merge_1.9/samtools-merge_1.9.cwl
   - id: bwa_sort
     in:
       - id: r1
@@ -59,7 +69,8 @@ steps:
       - id: reference_sequence
         source: reference_sequence
       - id: read_pair
-        valueFrom: ${ var data = []; data.push(inputs.r1); data.push(inputs.r2); return data; } 
+        source:
+         - group_reads/output
       - id: sample_id
         source: sample_id
       - id: lane_id
@@ -71,8 +82,7 @@ steps:
     run: align_sort_bam/align_sort_bam.cwl
     label: bwa_sort
     scatter:
-      - r1
-      - r2
+      - read_pair
       - lane_id
     scatterMethod: dotproduct
   - id: gatk_markduplicatesgatk
@@ -83,7 +93,7 @@ steps:
       - id: output_md_bam
       - id: output_md_metrics
     run: >-
-      command_line_tools/gatk_4.1.0.0/gatk_mark_duplicates.cwl
+      command_line_tools/gatk_mark_duplicates_4.1.0.0/gatk_mark_duplicates_4.1.0.0.cwl
     label: GATK MarkDuplicates
 requirements:
   - class: SubworkflowFeatureRequirement
