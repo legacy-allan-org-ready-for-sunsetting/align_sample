@@ -40,6 +40,8 @@ outputs:
     outputSource:
       - gatk_markduplicatesgatk/output_md_bam
     type: File
+    secondaryFiles: 
+      - ^.bai
 
 steps:
   - id: group_reads
